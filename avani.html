@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="HandheldFriendly" content="true" />
+  <title>Avani's Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <main class="placeholder-container fade-in">
+    <p>Avani’s portfolio is currently under development. Stay tuned — her creativity deserves the perfect stage.</p>
+    <a href="index.html" class="btn"> ← Back</a>
+  </main>
+
+  <style>
+    .fade-in {
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    .placeholder-container {
+      max-width: 600px;
+      margin: 15vh auto;
+      text-align: center;
+      color: #b983ff;
+      font-family: 'Share Tech Mono', monospace;
+      font-weight: 600;
+      font-size: 1.3rem;
+      padding: 2rem;
+      border: 2px solid #9d00ff;
+      border-radius: 12px;
+      background: rgba(26, 14, 29, 0.72);
+      box-shadow: 0 0 42px #c788ff22;
+      position: relative;
+      z-index: 2;
+    }
+    .btn {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      border-radius: 25px;
+      border: 2px solid #9d00ff;
+      color: #9d00ff;
+      font-weight: bold;
+      text-decoration: none;
+      background: transparent;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .btn:hover {
+      background-color: #9d00ff;
+      color: white;
+      box-shadow: 0 0 15px #f1c3ff88;
+    }
+    body {
+      background: linear-gradient(90deg, rgba(38, 6, 77, 0.75) 0%, rgba(78, 24, 97, 0.63) 100%), url('assets/img/bg.jpg') center center / cover no-repeat fixed;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      overflow-x: hidden;
+    }
+    #particles-js {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+
+  <script src="assets/js/particles.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 62, "density": { "enable": true, "value_area": 900 } },
+        "color": { "value": "#b983ff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.57, "random": true },
+        "size": { "value": 4.1, "random": true },
+        "line_linked": { "enable": true, "distance": 130, "color": "#c9b8fd", "opacity": 0.29, "width": 1.1 },
+        "move": { "enable": true, "speed": 1.6, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": false },
+          "resize": true
+        },
+        "modes": {
+          "repulse": { "distance": 90, "duration": 0.4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="HandheldFriendly" content="true" />
+  <title>Home page</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:700,900&display=swap" rel="stylesheet" />
+</head>
+
+<body class="glow-bg">
+  <div id="particles-js"></div>
+
+  <main class="center-content">
+    <h1 class="glow-title">BEHIND THE CODE</h1>
+    <div class="glow-subline">
+      <span class="blue">Two minds.</span>
+      <span class="normal"> One journey.</span>
+      <span class="pink"> Get to know us</span>
+    </div>
+
+    <div class="glow-btn-row">
+      <a href="brijesh.html" class="glow-btn code-btn btn-anim">
+        <span class="btn-front">Brijesh</span>
+        <span class="btn-hover">About Me</span>
+      </a>
+      <a href="avani.html" class="glow-btn code-btn btn-anim">
+        <span class="btn-front">Avani</span>
+        <span class="btn-hover">About Me</span>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    // Modern typewriter-then-cascade for subline. Ensures no "jump" on reload.
+    document.addEventListener("DOMContentLoaded", () => {
+      let wordTargets = document.querySelectorAll('.glow-subline span');
+      let i = 0;
+      function animateWord() {
+        if (i < wordTargets.length) {
+          wordTargets[i].style.opacity = 1;
+          wordTargets[i].style.animationPlayState = "running";
+          i++;
+          setTimeout(animateWord, 310);
+        }
+      }
+      animateWord();
+    });
+  </script>
+
+  <script src="assets/js/particles.js"></script>
+
+</body>
+
+</html>
